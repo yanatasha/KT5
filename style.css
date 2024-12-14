@@ -1,0 +1,63 @@
+ body{
+  background-color: aqua;
+  background-image: url('https://img.freepik.com/free-vector/serene-forest-clearing-vector-illustration_1308-161848.jpg');
+  background-size: cover;
+}
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+  }
+ .car{
+    width:200px;
+    position:absolute;
+    bottom:40px;
+    animation:drive 5s ease-in-out infinite;
+    background-color: #f8b500;
+    border-radius: 20px 27px 5px 5px;
+    
+  }
+  .body{
+    height:50px;
+      background-color:green;
+    transform:translateY(30%);
+    z-index:1;
+    
+  }
+  
+  .wheels{
+    display:flex;
+    justify-content:space-around;
+  }
+  .wheel{
+    height:30px;
+    width:30px;
+    background-color:black;
+    border-radius:50%;
+    z-index:10;
+  }
+  .road{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100vw;
+    height:40px;
+    background-color:grey;
+  }
+  .sun{
+    height:100px;
+    width:100px;
+    background-color:yellow;
+    border-radius:50%;
+  }
+  
+  @keyframes drive{
+    from{
+      left:-200px;
+    }
+    to{
+      left:calc(100vw - 50px - 200px);
+    }
+  }
+
+  
